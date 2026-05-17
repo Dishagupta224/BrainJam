@@ -1,17 +1,21 @@
 # BrainJam
 
-Collaborative puzzle rooms: create a lobby, invite friends with a code, and tackle a puzzle pack together (2–4 players).
+Collaborative puzzle rooms: create a lobby, invite friends with a code, and tackle a puzzle pack together (2-4 players).
 
-## Status
+## Tech Stack
 
-This repo currently supports:
-- User registration/login with JWT (Flask).
-- Puzzle pack catalog (seeded into Postgres at startup).
-- Room creation + join-by-invite-code (lobby only).
+- **Frontend**: React + Vite + React Router
+- **Backend**: Python + Flask (REST) + SQLAlchemy + Alembic/Flask-Migrate
+- **Database**: PostgreSQL
+- **Auth**: JWT (Bearer tokens)
+- **Dev**: ESLint (frontend), pytest (backend)
 
-Planned/placeholder:
-- Real-time gameplay over WebSockets (`/ws/...` is currently a 501 placeholder).
-- Room controls (lock/ready/start/kick) and task gameplay endpoints.
+## Screenshots
+
+![Screenshot 1](./1.png)
+![Screenshot 2](./2.png)
+![Screenshot 3](./3.png)
+![Screenshot 4](./4.png)
 
 ---
 
