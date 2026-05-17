@@ -20,18 +20,12 @@ Planned/placeholder:
 ## Architecture
 
 ```mermaid
-flowchart LR
-  U[User Browser] -->|HTTP| FE[Frontend (React + Vite)]
-  FE -->|REST /api| BE[Backend (Flask API)]
-  BE -->|SQLAlchemy| DB[(Postgres)]
-
-  subgraph Auth
-    BE -->|Issue/verify JWT| FE
-  end
-
-  subgraph Realtime[Realtime (Planned)]
-    FE -.->|WebSocket /ws| BE
-  end
+graph LR
+  U[User Browser] --> FE[Frontend (React + Vite)]
+  FE -->|REST API (/api)| BE[Backend (Flask)]
+  BE --> DB[Postgres]
+  BE -->|JWT auth| FE
+  FE -.->|WebSocket (planned)| BE
 ```
 
 ## Key Components
@@ -171,4 +165,3 @@ backend/   Flask API + SQLAlchemy + migrations
 frontend/  React SPA (Vite)
 docs/      UX/product spec notes
 ```
-
