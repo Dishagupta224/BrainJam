@@ -1,0 +1,14 @@
+Flask==3.0.3
+flask-cors==4.0.1
+Flask-SQLAlchemy==3.1.1
+Flask-Migrate==4.0.7
+psycopg[binary]==3.2.9
+python-dotenv==1.0.1
+
+# Phase 3+
+PyJWT==2.9.0
+passlib[bcrypt]==1.7.4
+flask-sock==0.7.0
+
+# Dev / tests
+pytest==8.3.2
