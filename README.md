@@ -21,9 +21,9 @@ Planned/placeholder:
 
 ```mermaid
 graph LR
-  U[User Browser] --> FE[Frontend (React + Vite)]
-  FE -->|REST API (/api)| BE[Backend (Flask)]
-  BE --> DB[Postgres]
+  U["User Browser"] --> FE["Frontend"]
+  FE -->|REST API| BE["Backend"]
+  BE --> DB["PostgreSQL"]
   BE -->|JWT auth| FE
   FE -.->|WebSocket (planned)| BE
 ```
@@ -37,13 +37,13 @@ graph LR
 ## Core Flows
 
 1. **Auth**
-   - Register/Login → backend issues JWT (7-day expiry).
+   - Register/Login -> backend issues JWT (7-day expiry).
    - Frontend stores JWT locally and uses it for authenticated routes and requests.
 2. **Browse puzzles**
    - Frontend queries `/api/puzzles` and `/api/puzzles/genres`.
 3. **Create/join room**
-   - Create room picks a puzzle pack → returns a room with `inviteCode`.
-   - Join uses invite code → returns `roomId`, then UI loads the room.
+   - Create room picks a puzzle pack -> returns a room with `inviteCode`.
+   - Join uses invite code -> returns `roomId`, then UI loads the room.
 
 ---
 
