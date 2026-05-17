@@ -25,7 +25,7 @@ graph LR
   FE -->|REST API| BE["Backend"]
   BE --> DB["PostgreSQL"]
   BE -->|JWT auth| FE
-  FE -.->|WebSocket (planned)| BE
+  FE -.->|WebSocket planned| BE
 ```
 
 ## Key Components
