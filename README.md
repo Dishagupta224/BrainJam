@@ -8,7 +8,6 @@ Collaborative puzzle rooms: create a lobby, invite friends with a code, and tack
 - **Backend**: Python + Flask (REST) + SQLAlchemy + Alembic/Flask-Migrate
 - **Database**: PostgreSQL
 - **Auth**: JWT (Bearer tokens)
-- **Dev**: ESLint (frontend), pytest (backend)
 
 ## Screenshots
 
